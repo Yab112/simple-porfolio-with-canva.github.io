@@ -14,7 +14,6 @@
 <body>
     <div id="nav">
         <h3><b>WEB</b>DEV</h3>
-        <button>9/18/2024</button>
     </div>
     <div id="main">
         <div id="page">
@@ -195,49 +194,69 @@
         </div>
         <div id="page2">
             <div id="projects">
-                <h2>Projects</h2>
+                <div class="proj-button">
+                    <h2>Projects</h2>
+                    <div class="ch">
+                        <p>See More</p>
+                        <a href="https://github.com/Yab112/">
+                            <img src="https://img.icons8.com/ios-filled/50/000000/arrow.png" alt="Right Arrow">
+                        </a>
+                    </div>
+
+                </div>
+                
                 <div class="cards">
                     <div class="card">
-                        <div class="txt">
-                            <h3>Project 1</h3>
-                            <p>Description of Project 1</p>
-                            <a href="https://github.com/yourusername/project1" target="_blank" rel="noreferrer"
-                            class="github-link">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub">
-                            View on GitHub
-                            </a>
-                        </div>
                         <div class="card-image">
-                            <img class="proj-img" src="https://media.istockphoto.com/id/1530973530/photo/software-development-concept.webp?s=612x612&w=is&k=20&c=zuPB30UgjRdAn_qH_5tgQOGAsO4kRJdIspnv4x5aMcY=" alt="Project 1 Image">
+                            <img class="proj-img"  src="https://media.istockphoto.com/id/1530973530/photo/software-development-concept.webp?s=612x612&w=is&k=20&c=zuPB30UgjRdAn_qH_5tgQOGAsO4kRJdIspnv4x5aMcY=" alt="Project 2 Image">
                         </div>
+                       <div class="card-desc">
+                           
+                        <h3>Responsive User Dashboard</h3>
+                        <p>A fully responsive user dashboard built with React, Shadcn UI, and Tailwind CSS. The dashboard adapts to all screen sizes and offers user-friendly navigation, analytics, and customizable widgets for better user experience.</p>
+                        <a href="https://github.com/Yab112/" target="_blank" rel="noreferrer" class="github-link">
+                            <img class="git" src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub">
+                            View on GitHub
+                        </a>
+                        
+                       </div>
                     </div>
                     <div class="card">
                         <div class="card-image">
                             <img class="proj-img"  src="https://media.istockphoto.com/id/1530973530/photo/software-development-concept.webp?s=612x612&w=is&k=20&c=zuPB30UgjRdAn_qH_5tgQOGAsO4kRJdIspnv4x5aMcY=" alt="Project 2 Image">
                         </div>
-                        <h3>Project 2</h3>
-                        <p>Description of Project 2</p>
-                        <a href="https://github.com/yourusername/project2" target="_blank" rel="noreferrer"
-                            class="github-link">
-                            <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub">
-                            View on GitHub
-                        </a>
+                        <div class="card-desc">
+                           
+                            <h3>E-Commerce</h3>
+                            <p>Fully functional e-commerce website utilizing React, Shadcn UI, Tailwind CSS, and Stripe for payment processing. This project includes a modern UI/UX design, secure checkout, and product management features.</p>
+                            <a href="https://github.com/yourusername/ecommerce" target="_blank" rel="noreferrer" class="github-link">
+                                <img class="git" src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub">
+                                View on GitHub
+                            </a>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="page3">
-            <div id="text3">
-                <h3>Wanna contact Me!</h3>
-                <h1>
-
-                    CYBERFIELD
-                    <br>
-                    IS OUR
-                    <br>
-                    PLAYGROUND
-                </h1>
-
+            <div id="contact-me">
+                <form id="contact-form">
+                    <h2>Contact Me</h2>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </div>
     </div>

@@ -46,6 +46,7 @@ canvas {
     top: 0;
     object-fit: cover;
 }
+
 #loop{
     display: flex;
     position: absolute;
@@ -75,6 +76,11 @@ canvas {
     text-align: center; /* Center the text horizontally */
     margin-bottom: 20px; /* Space below the heading */
 }
+@media screen and (max-width: 768px) {
+    #right-part {
+        display: none;
+    }
+}
 
 /* Styling for the span inside the h1-modified */
 .h1-modified span {
@@ -100,6 +106,7 @@ canvas {
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: #000;
 }
 
 .contact-me button i {
@@ -111,7 +118,7 @@ canvas {
     transform: scale(1.3);
     background-color: #040101;
     border:1px solid transparent;
-    color:white
+    color:rgb(206, 201, 201)
 
 }
 #loop>h1{
@@ -217,6 +224,11 @@ canvas {
     max-width: 600px;
     color: rgb(4, 4, 4);
 }
+#text-page1:hover{
+  transform: rotate(0deg);
+  transition: all 0.5s;
+  box-shadow: 0 0 90px rgba(12, 209, 61, 0.5);
+}
 img{
     width: 70px;
     height: 60px;
@@ -232,16 +244,17 @@ img:hover {
 #page2{
     background: #000;
 }
-#page2>#projects{
-    left:50%;
+#projects {
+    left: 50%;
     right: 4%;
-    top:5%;
+    top: 5%;
     position: absolute;
     border-top: 2px solid rgb(236, 227, 227);
     display: flex;
     flex-direction: column;
 }
-#projects>h2 {
+
+#projects > h2 {
     text-align: center;
     margin-bottom: 40px;
     color: #ffffff;
@@ -249,7 +262,6 @@ img:hover {
     font-family: 'Arial', sans-serif;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 .cards {
     display: flex;
@@ -265,7 +277,7 @@ img:hover {
     background: linear-gradient(135deg, #115a8b, #2a2a2a);
     border: 1px solid slateblue;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(231, 226, 226, 0.2);
+    box-shadow: 0 8px 40px rgba(252, 251, 251, 0.2);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -280,47 +292,119 @@ img:hover {
 .card h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: #212529;
+    color: #ffffff;
+    padding-left: 20px;
 }
 
 /* Card description style */
 .card p {
-    color: #495057;
+    color: #cfcfcf;
     margin-top: 10px;
+    padding-left: 20px;
+}
+.proj-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    margin-top:0px;
+    color: #ffffff;
+    justify-content: space-between;
+}
+.ch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text and arrow in a row */
+    gap: 10px; /* Space between text and arrow */
+    cursor: pointer;
+    padding: 10px;
+    color:white
 }
 
+
+.ch p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.ch a img {
+    width: 24px;
+    height: 24px;
+   background-color: white;
+   border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.ch:hover a img {
+    transform: translateX(5px); /* Move the arrow slightly to the right on hover */
+}
+
+.ch a {
+    display: flex;
+    align-items: center;
+}
+
+
+.card-desc{
+    display: flex;
+    flex-direction:column;
+    max-width: 40%;
+}
 /* GitHub link style */
 .github-link {
     display: flex;
     align-items: center;
     margin-top: 20px;
-    color: #333;
+    padding-left: 20px;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s ease;
+    z-index: 10; /* Ensures the link is above other elements */
 }
-.card-image {
-    width: 60%;
-    height: 100%;
-    object-fit:fill;
+
+.github-link img {
+    width: 24px;
+    margin-right: 8px;
+    width: auto;
+    height: auto;
+    object-fit: none;
+    transform: none;
+    box-shadow: none;
+    color: #000;
 
 }
-.card-image .proj-img{
+.github-link img :hover{
+    border-bottom: 1px solid #000;
+}
+/* Card image style */
+.card-image {
+    width: 50%;
+    height: 100%;
+}
+
+.card-image .proj-img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
     transform: rotate(-6deg);
-}
-.card-image .proj-img:hover{
-    transform: scale(1.2);
-    transform: rotate(1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 40px rgba(49, 231, 94, 0.5);
 }
-.github-link>.proj-img {
-    width:full;
-    height: full;
-    margin-right: 8px;
-    transition: transform 0.3s ease;
+
+.card-image .proj-img:hover {
+    transform: scale(1) rotate(1deg);
+    box-shadow: 0 0 40px rgba(49, 231, 94, 0.5);
+}
+
+/* Fix for the second card where content is misplaced */
+.card:nth-child(2) {
+    flex-direction: row-reverse;
 }
 
 .github-link:hover {
@@ -330,17 +414,177 @@ img:hover {
 
 
 
-#page3>#text3{
+#page3>#contact-me{
     position: absolute;
-    top: 40%;
-    right: 10%;
+    top: 2%;
+    right: 20%;
     text-align: end;
 }
-#page3>#text3>h3{
+#page3>#contact-me>#contact-form h2{
     color: #7c7c7c;
     font-weight: 400;
+    font-size: 100px;
+}/* Form container styling */
+#contact-form {
+    max-width: 600px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
 }
-#page3>#text3>h1{
-    font-size: 70px;
 
+/* Form heading */
+#contact-form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Input and textarea styling */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for the input focus state */
+input:focus, textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    outline: none;
+}
+
+/* Textarea specific styling */
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Submit button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+button:hover {
+    background-color: #357abd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #contact-form {
+        padding: 15px;
+    }
+
+    #contact-form h2 {
+        font-size: 24px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #content {
+        width: 90%;
+        left: 0;
+        margin: auto;
+    }
+    #content>.contact-me>button:hover{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: none;
+        #content>button{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #content>.contact-me{
+        margin: auto;
+        margin-left: 18px;
+    }
+    
+    }
+    #right-part {
+        display: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    canvas {
+        display: none;
+    }
+    #page1>#tools-container{
+        position: absolute;
+        left: -12px;
+        width: 100%;
+        margin-left: 19px;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    #page1>#text-page{
+           translate: -100%;
+           transition: transform 0.3s ease;
+        }
+        #content>.contact-me>button:hover {
+           transform: translateY(-30px);
+        }
+    #page2>#projects{
+        position: absolute;
+        left: 0;
+        display:flex;
+        flex-wrap:wrap;
+        margin: auto;
+        max-width: 70%;
+    }
+    #page2>#projects>.cards>.card{
+        width:450px ;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    #page3>#contact-me{
+        position: absolute;
+        top: 2%;
+        right: 20%;
+        text-align: end;
+    }
+
+    #page3>#contact-me>#contact-form h2{
+        color: #7c7c7c;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    #page3>#contact-me>#contact-form{
+        width:70vw;
+        margin: auto;
+    }
 }
