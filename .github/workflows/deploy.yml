@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust this if you're using another branch for deployment
+      - main  # Change this if you're deploying from a different branch
 
 jobs:
   deploy:
@@ -16,5 +16,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # Directory to deploy (this should point to the root if you're only using HTML/CSS/JS files)
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # This line is important
+        publish_dir: ./  # Point to your deployment directory
