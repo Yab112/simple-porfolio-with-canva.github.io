@@ -48,6 +48,7 @@ window.addEventListener("resize", function () {
 
 function files(index) {
   var data = `
+  ./male0300.png
      ./male0001.png
      ./male0002.png
      ./male0003.png
