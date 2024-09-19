@@ -1,0 +1,640 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    position: relative;
+    overflow: hidden;
+}
+#page{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1f1f1;
+}
+#page1{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1f1f1;
+}
+#page2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1f1f1;
+}
+#page3{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #040101;
+    z-index: 5;
+}
+canvas {
+    position: fixed;
+    z-index: 10;
+    width: 50vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+#loop{
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left:8 0%;
+    height: 25%;
+    font-size: 50px;
+    white-space: nowrap;
+    font-family: gilroy;
+    max-width: 60%;
+}
+#content{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+}
+/* Styling for the h1-modified */
+.h1-modified {
+    font-size: 2.5rem; /* Adjust the font size */
+    letter-spacing: 1.5px; /* Add spacing between letters */
+    line-height: 1.4; /* Adjust line height for better readability */
+    color: #333; /* Main text color */
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    text-align: center; /* Center the text horizontally */
+    margin-bottom: 20px; /* Space below the heading */
+}
+@media screen and (max-width: 768px) {
+    #right-part {
+        display: none;
+    }
+}
+
+/* Styling for the span inside the h1-modified */
+.h1-modified span {
+    -webkit-text-stroke: 1.2px #ae0eab;
+    color: transparent;
+    font-weight: 500;
+}
+.contact-me {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-me button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #ff00ff, #00ffff) 1;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #000;
+}
+
+.contact-me button i {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-me button:hover {
+    transform: scale(1.3);
+    background-color: #040101;
+    border:1px solid transparent;
+    color:rgb(206, 201, 201)
+
+}
+#loop>h1{
+    font-weight: 100;
+    animation-name: anim;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#loop>h1>span{
+    -webkit-text-stroke: 1.2px #000;
+    color: transparent;
+    font-weight: 500;
+}
+@keyframes anim{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 0px 30px;
+}
+#nav>h3{
+    font-family: gilroy;
+    font-weight: 400;
+    font-size: 22px;
+    color:black
+}
+#nav>#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+#nav>#nav-part2 button a{
+    font-size: 18px;
+    font-weight: 400;
+    color: #040404;
+    text-decoration: none;
+}
+#nav>button{
+    padding: 10px 20px;
+    color: #010000;
+    border: none;
+}
+#page>h3{
+    position: absolute;
+    top: 55%;
+    font-family: gilroy;
+    font-weight: 400;
+    color: #7c7c7c;
+    left: 5%;
+}
+
+#page>h4{
+    position: absolute;
+    top: 62%;
+    left: 25%;
+    font-family: gilroy;
+    font-weight: 500;
+}
+#page1>#right-part{
+    position: absolute;
+    top: 0;   
+    left: 0%;
+    background-color: #0b010b;
+    width: 50vw;
+    height: 70vh;
+    border-radius: 50%;
+}
+#page1>#right-part>#left{
+    font-weight: 400;
+    color: #0e0e0e;
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-family: gilroy;
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    text-shadow: 0 0 10px rgba(229, 229, 238, 0.8), 0 0 20px rgba(186, 186, 240, 0.6);
+}
+#page1>#right-part>#right{
+    font-weight: 400;
+    color: #0e0e0e;
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-family: gilroy;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    text-shadow: 0 0 10px rgba(229, 229, 238, 0.8), 0 0 20px rgba(186, 186, 240, 0.6);
+}
+#page1>#right-text>h1{
+    line-height: 1.5;
+    font-size: 50px;
+}
+#page1>#tools-container{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    text-align: end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.tools{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+#text-page1 {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    border: 1px solid black;
+    transform: rotate(-2deg);
+    padding: 30px 15px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+    margin-top: 60px;
+    max-width: 600px;
+    color: rgb(4, 4, 4);
+    z-index: 0.8;
+}
+
+blockquote {
+    font-style: italic; /* Italicize the text */
+    padding: 15px; /* Add some padding */
+    border-left: 5px solid #ccc; /* Add a left border for emphasis */
+    margin: 20px 0; /* Add margin above and below the block */
+    color: #555; /* Change the text color for better readability */
+    background-color: #f9f9f9; /* Light background color */
+    quotes: "“" "”" "‘" "’"; /* Custom quotes for styling */
+}
+
+blockquote:before {
+    content: open-quote; /* Add opening quote */
+}
+
+blockquote:after {
+    content: close-quote; /* Add closing quote */
+}
+
+#text-page1:hover{
+  transform: rotate(0deg);
+  transition: all 0.5s;
+  box-shadow: 0 0 90px rgba(12, 209, 61, 0.5);
+}
+
+
+img{
+    width: 70px;
+    height: 60px;
+}
+img {
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px rgba(49, 231, 94, 0.5);
+}
+#page2{
+    background: #000;
+}
+#projects {
+    left: 50%;
+    right: 4%;
+    top: 5%;
+    position: absolute;
+    border-top: 2px solid rgb(236, 227, 227);
+    display: flex;
+    flex-direction: column;
+}
+
+#projects > h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 20px;
+    width: 800px;
+    height: 250px;
+    background: linear-gradient(135deg, #115a8b, #2a2a2a);
+    border: 1px solid slateblue;
+    border-radius: 15px;
+    box-shadow: 0 8px 40px rgba(252, 251, 251, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+}
+
+.card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+/* Card description style */
+.card p {
+    color: #cfcfcf;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.proj-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    margin-top:0px;
+    color: #ffffff;
+    justify-content: space-between;
+}
+.ch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text and arrow in a row */
+    gap: 10px; /* Space between text and arrow */
+    cursor: pointer;
+    padding: 10px;
+    color:white
+}
+
+
+.ch p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.ch a img {
+    width: 24px;
+    height: 24px;
+   background-color: white;
+   border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.ch:hover a img {
+    transform: translateX(5px); /* Move the arrow slightly to the right on hover */
+}
+
+.ch a {
+    display: flex;
+    align-items: center;
+}
+
+
+.card-desc{
+    display: flex;
+    flex-direction:column;
+    max-width: 40%;
+}
+/* GitHub link style */
+.github-link {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    z-index: 10; /* Ensures the link is above other elements */
+}
+
+.github-link img {
+    width: 24px;
+    margin-right: 8px;
+    width: auto;
+    height: auto;
+    object-fit: none;
+    transform: none;
+    box-shadow: none;
+    color: #000;
+
+}
+.github-link img :hover{
+    border-bottom: 1px solid #000;
+}
+/* Card image style */
+.card-image {
+    width: 50%;
+    height: 100%;
+}
+
+.card-image .proj-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    transform: rotate(-6deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 40px rgba(49, 231, 94, 0.5);
+}
+
+.card-image .proj-img:hover {
+    transform: scale(1) rotate(1deg);
+    box-shadow: 0 0 40px rgba(49, 231, 94, 0.5);
+}
+
+/* Fix for the second card where content is misplaced */
+.card:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.github-link:hover {
+    color: #000;
+}
+
+
+
+
+#page3>#contact-me{
+    position: absolute;
+    top: 2%;
+    right: 20%;
+    text-align: end;
+}
+#page3>#contact-me>#contact-form h2{
+    color: #7c7c7c;
+    font-weight: 400;
+    font-size: 100px;
+}/* Form container styling */
+#contact-form {
+    max-width: 600px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form heading */
+#contact-form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Input and textarea styling */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for the input focus state */
+input:focus, textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    outline: none;
+}
+
+/* Textarea specific styling */
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Submit button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+button:hover {
+    background-color: #357abd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #contact-form {
+        padding: 15px;
+    }
+
+    #contact-form h2 {
+        font-size: 24px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #content {
+        width: 90%;
+        left: 0;
+        margin: auto;
+    }
+    #content>.contact-me>button:hover{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: none;
+        #content>button{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #content>.contact-me{
+        margin: auto;
+        margin-left: 18px;
+    }
+    
+    }
+    #right-part {
+        display: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    canvas {
+        display: none;
+    }
+    #page1>#tools-container{
+        position: absolute;
+        left: -12px;
+        width: 100%;
+        margin-left: 19px;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    #page1>#text-page{
+           translate: -100%;
+           transition: transform 0.3s ease;
+        }
+        #content>.contact-me>button:hover {
+           transform: translateY(-30px);
+        }
+    #page2>#projects{
+        position: absolute;
+        left: 0;
+        display:flex;
+        flex-wrap:wrap;
+        margin: auto;
+        max-width: 70%;
+    }
+    #page2>#projects>.cards>.card{
+        width:450px ;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    #page3>#contact-me{
+        position: absolute;
+        top: 2%;
+        right: 20%;
+        text-align: end;
+    }
+
+    #page3>#contact-me>#contact-form h2{
+        color: #7c7c7c;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    #page3>#contact-me>#contact-form{
+        width:70vw;
+        margin: auto;
+    }
+}
