@@ -253,7 +253,20 @@ canvas {
     color: rgb(4, 4, 4);
     z-index: 0.8;
 }
-
+#text-page1-2 { 
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    border: 1px solid black;
+    transform: rotate(-2deg);
+    padding: 30px 15px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+    max-width: 600px;
+    color: rgb(4, 4, 4);
+    z-index: 1;
+    margin-top: -px;
+}
 blockquote {
     font-style: italic; /* Italicize the text */
     padding: 15px; /* Add some padding */
@@ -278,7 +291,11 @@ blockquote:after {
   box-shadow: 0 0 90px rgba(12, 209, 61, 0.5);
 }
 
-
+#text-page1-2:hover{
+    transform: rotate(0deg);
+    transition: all 0.5s;
+    box-shadow: 0 0 90px rgba(12, 209, 61, 0.5);
+  }
 img{
     width: 70px;
     height: 60px;
