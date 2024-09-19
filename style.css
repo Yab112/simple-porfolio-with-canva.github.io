@@ -157,11 +157,21 @@ canvas {
     font-size: 22px;
     color:black
 }
+#nav>#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+#nav>#nav-part2 button a{
+    font-size: 18px;
+    font-weight: 400;
+    color: #040404;
+    text-decoration: none;
+}
 #nav>button{
     padding: 10px 20px;
-    border-radius: 50px;
-    background-color: #000;
-    color: #fff;
+    color: #010000;
     border: none;
 }
 #page>h3{
@@ -189,9 +199,27 @@ canvas {
     height: 70vh;
     border-radius: 50%;
 }
-#page1>#right-text>h3{
+#page1>#right-part>#left{
     font-weight: 400;
-    color: #7c7c7c;
+    color: #0e0e0e;
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-family: gilroy;
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    text-shadow: 0 0 10px rgba(229, 229, 238, 0.8), 0 0 20px rgba(186, 186, 240, 0.6);
+}
+#page1>#right-part>#right{
+    font-weight: 400;
+    color: #0e0e0e;
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-family: gilroy;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    text-shadow: 0 0 10px rgba(229, 229, 238, 0.8), 0 0 20px rgba(186, 186, 240, 0.6);
 }
 #page1>#right-text>h1{
     line-height: 1.5;
@@ -223,12 +251,34 @@ canvas {
     margin-top: 60px;
     max-width: 600px;
     color: rgb(4, 4, 4);
+    z-index: 0.8;
 }
+
+blockquote {
+    font-style: italic; /* Italicize the text */
+    padding: 15px; /* Add some padding */
+    border-left: 5px solid #ccc; /* Add a left border for emphasis */
+    margin: 20px 0; /* Add margin above and below the block */
+    color: #555; /* Change the text color for better readability */
+    background-color: #f9f9f9; /* Light background color */
+    quotes: "“" "”" "‘" "’"; /* Custom quotes for styling */
+}
+
+blockquote:before {
+    content: open-quote; /* Add opening quote */
+}
+
+blockquote:after {
+    content: close-quote; /* Add closing quote */
+}
+
 #text-page1:hover{
   transform: rotate(0deg);
   transition: all 0.5s;
   box-shadow: 0 0 90px rgba(12, 209, 61, 0.5);
 }
+
+
 img{
     width: 70px;
     height: 60px;
