@@ -1,45 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="project.css">
 </head>
+
 <body>
     <section class="container">
-       <div class="follow-me">
+        <div class="follow-me sticky">
             <article class="profile">
                 <div class="profile-image">
-                <img src="https://avatars.githubusercontent.com/u/106923105?v=4" />
+                    <img src="https://avatars.githubusercontent.com/u/106923105?v=4" />
                 </div>
                 <h2 class="profile-username">Yabibal Eshetie</h2>
-                <small class="profile-user-handle">https://github.com/Yab112</small>
+                <small class="profile-user-handle">sleep->code->coffee</small>
                 <div class="profile-actions">
-                <button class="btn btn--primary">Follow Me on Github</button>
-                <button class="btn btn--icon">
-                    <i class="ph-export"></i>
-                </button>
-                <button class="btn btn--icon">
-                    <i class="ph-dots-three-outline-fill"></i>
-                </button>
+                    <a href="https://github.com/Yab112"><button class="btn btn--primary">Follow Me on
+                            Github</button></a>
                 </div>
                 <div class="profile-links">
-                <a href="#" class="link link--icon">
-                    <i class="ph-twitter-logo"></i>
-                </a>
-                <a href="#" class="link link--icon">
-                    <i class="ph-facebook-logo"></i>
-                </a>
-                <a href="#" class="link link--icon">
-                    <i class="ph-instagram-logo"></i>
-                </a>
+                   <a href="index.html">Home</a>
                 </div>
             </article>
-       </div>
-       <div class="projects">
-            
-       </div>
+        </div>
+        <div class="content">
+            <div class="hero">
+                <h1>My Recent Projects</h1>
+                <p>Check out my latest work below!</p>
+            </div>
+            <div class="proj-cards-g">
+                <div class="cards-container"></div>
+                <script>
+                    const projectsContainer = document.querySelector('.cards-container');
+                    const projects = [
+                        {
+                            "title": "Simple Log In",
+                            "description": "A simple log in page with a login form and a sign up option.",
+                            "techstack": ["html", "CSS", "bootstrap"],
+                            "image": "proj-images/login.png",  // Updated path
+                            "link": "https://yab112.github.io/Dot/day-5/index.html"
+                        },
+                        {
+                            "title": "Simple Pricing Page",
+                            "description": "A simple Pricing  page with multiple options.",
+                            "techstack": ["html", "CSS", "bootstrap"],
+                            "image": "proj-images/login.png",  // Updated path
+                            "link": "https://yab112.github.io/Dot/day-6/index.html"
+                        },
+                        {
+                            "title": "Simple register Page",
+                            "description": "A simple register  page with for  registering a new user to the website.",
+                            "techstack": ["html", "CSS", "bootstrap"],
+                            "image": "proj-images/register.png",  // Updated path
+                            "link": "https://yab112.github.io/Dot/day-7/index.html"
+                        },
+                        {
+                            "title": "Simple grid template",
+                            "description": "A simple grid  template for  a website.",
+                            "techstack": ["html", "CSS", "bootstrap"],
+                            "image": "proj-images/gird.png",  // Updated path
+                            "link": "https://yab112.github.io/Dot/lab-10/index.html"
+                        },
+                        {
+                            "title": "Simple form template",
+                            "description": "A simple form  template for  a website.",
+                            "techstack": ["html", "CSS", "bootstrap"],
+                            "image": "proj-images/form.png",  // Updated path
+                            "link": "https://yab112.github.io/Dot/lab-5/index.html"
+                        },
+                        {
+                            "title": "rick portfolio",
+                            "description": "A simple portfolio for rick",
+                            "techstack": ["html", "CSS", "bootstrap"],
+                            "image": "proj-images/rick.png",  // Updated path
+                            "link": "https://yab112.github.io/Dot/lab-13/index.html"
+                        },
+                        {
+                            "title": "stanning hero section",
+                            "description": "a hero section for website",
+                            "techstack": ["html", "CSS", "bootstrap"],
+                            "image": "proj-images/deadpool.png",  // Updated path
+                            "link": "https://yab112.github.io/Dot/lb-12-assignment/index.html"
+                        },
+                        {
+                            "title": "video background hero section",
+                            "description": "a hero section for website",
+                            "techstack": ["html", "CSS"],
+                            "image": "proj-images/vodeback.png",  // Updated path
+                            "link": "https://yab112.github.io/Dot/lab-12-practice/videoBack.html"
+                        }
+                    ];
+                    projects.forEach((project) => {
+                        const cardHTML = `
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="proj-img" src="${project.image}" alt="${project.title} Image">
+                            </div>
+                            <div class="card-desc">
+                                <h3>${project.title}</h3>
+                                <p>${project.description}</p>
+                                <a href="${project.link}" target="_blank" rel="noreferrer" class="github-link">Check it out!</a>
+                                <a href="https://github.com/Yab112/Dot" target="_blank" rel="noreferrer" class="github-link">
+                                    <img class="git" src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub">
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                        projectsContainer.innerHTML += cardHTML;
+                    });
+                </script>
+            </div>
+        </div>
     </section>
 </body>
+
 </html>
